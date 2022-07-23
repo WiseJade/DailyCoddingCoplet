@@ -1,6 +1,8 @@
+package removeExtremes;
+
 import java.util.*;
 
-public class RemoveExtremes {
+public class RemoveExtremes_1 {
     public String[] removeExtremes(String[] arr) {
         // TODO:
         if(arr.length == 0) return null;

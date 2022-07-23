@@ -8,7 +8,9 @@ public class Test {
 //        System.out.println(c.compressString("3wggopp"));
 //        System.out.println(c.compressString("EQTWVO3QVDVRC"));
 //        System.out.println();
-        Power p = new Power();
-        System.out.println(p.power(5, 22));
+//        Power p = new Power();
+//        System.out.println(p.power(5, 22));
+        PowerSet powerSet = new PowerSet();
+        System.out.println(powerSet.powerSet("jjump"));
     }
 }
