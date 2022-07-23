@@ -6,28 +6,26 @@ public class RemoveExtremes_1 {
     public String[] removeExtremes(String[] arr) {
         // TODO:
         if(arr.length == 0) return null;
-        int index = 0;
-        int size = 0;
+        int maxIndex = 0;
+        int maxLength = arr[0].length();
+        int minIndex = 0;
+        int minLength = arr[0].length();
         ArrayList<String> list = new ArrayList<String>(Arrays.asList(arr));
-        // 가장 큰 길이의 배열 지우기
         for(int i = 0; i < list.size(); i++) {
-            if(size <= list.get(i).length()) {
-                index = i;
-                size = list.get(i).length();
+            if(maxLength <= list.get(i).length()) {
+                maxIndex = i;
+                maxLength = list.get(i).length();
+            }
+
+        }
+        list.remove(maxIndex);
+        for(int i = 0; i < list.size(); i++) {
+            if (minLength >= list.get(i).length()) {
+                minIndex = i;
+                minLength = list.get(i).length();
             }
         }
-        list.remove(index);
-        index = 0;
-        size = list.get(0).length();
-        // 가장 작은 길이의 배열 지우기
-        for(int i = 0; i < list.size(); i++) {
-            if(size >= list.get(i).length()) {
-                index = i;
-                size = list.get(i).length();
-            }
-        }
-        list.remove(index);
-        String[] result = list.toArray(new String[list.size()]);
-        return result;
+        list.remove(minIndex);
+        return list.toArray(new String[list.size()]);
     }
 }
