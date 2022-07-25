@@ -1,6 +1,8 @@
+package reverseArr;
+
 import java.util.*;
 
-public class ReverseArr {
+public class ReverseArr_1 {
     public class Solution {
 
         public int[] reverseArr(int[] arr) {
