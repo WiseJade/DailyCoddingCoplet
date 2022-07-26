@@ -4,6 +4,8 @@ import java.util.*;
 
 public class InsertDash_2 {
     public String insertDash(String str) {
+        if (str.length() <= 0) return null;
+
         char[] charArray = str.toCharArray();
         List<Character> list = new ArrayList<>();
         for (char c : charArray) {
