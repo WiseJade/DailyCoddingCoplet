@@ -1,6 +1,8 @@
+package orderOfPresentation;// 효율적이지 못한 알고리즘
+
 import java.util.*;
 
-public class OrderOfPresentation {
+public class OrderOfPresentation_1 {
     public int orderOfPresentation(int N, int[] K) {
         // TODO:
         ArrayList<int[]> random = permutation(N, new int[]{}, new boolean[N], new ArrayList<int[]>(), 0);
