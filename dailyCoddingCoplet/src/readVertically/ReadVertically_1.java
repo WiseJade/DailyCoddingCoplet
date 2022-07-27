@@ -1,4 +1,6 @@
-public class ReadVertically {
+package readVertically;
+
+public class ReadVertically_1 {
     public String readVertically(String[] arr) {
         // TODO:
         String result = "";
