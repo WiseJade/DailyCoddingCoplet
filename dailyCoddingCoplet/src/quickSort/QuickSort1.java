@@ -1,10 +1,8 @@
-// 35번 QuickSort
+package quickSort;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-public class QuickSort {
+public class QuickSort1 {
     public int[] quickSort(int[] arr) {
         // TODO:
         if (arr.length <= 1) {
