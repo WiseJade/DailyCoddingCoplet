@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class MergeSort1 {
     public int[] mergeSort(int[] arr) {
-        // TODO :
         if (arr.length < 2) {
             return arr;
         }
@@ -12,24 +11,24 @@ public class MergeSort1 {
         int[] left = mergeSort(Arrays.copyOfRange(arr, 0, middle));
         int[] right = mergeSort(Arrays.copyOfRange(arr, middle, arr.length));
 
-        int[] result = new int[left.length + right.length];
+        arr = new int[left.length + right.length];
         int leftIdx = 0;
         int rightIdx = 0;
-        for (int i = 0; i < result.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             if (leftIdx >= left.length) {
-                System.arraycopy(right, rightIdx, result, i, right.length - rightIdx);
+                System.arraycopy(right, rightIdx, arr, i, right.length - rightIdx);
                 break;
             } else if (rightIdx >= right.length) {
-                System.arraycopy(left, leftIdx, result, i, left.length - leftIdx);
+                System.arraycopy(left, leftIdx, arr, i, left.length - leftIdx);
                 break;
             } else if(left[leftIdx] > right[rightIdx]) {
-                result[i] = right[rightIdx];
+                arr[i] = right[rightIdx];
                 rightIdx++;
             } else {
-                result[i] = left[leftIdx];
+                arr[i] = left[leftIdx];
                 leftIdx++;
             }
         }
-        return result;
+        return arr;
     }
 }
