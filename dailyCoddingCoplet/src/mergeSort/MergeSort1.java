@@ -1,6 +1,8 @@
+package mergeSort;
+
 import java.util.Arrays;
 
-public class MergeSort {
+public class MergeSort1 {
     public int[] mergeSort(int[] arr) {
         // TODO :
         if (arr.length < 2) {
